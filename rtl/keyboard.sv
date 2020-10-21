@@ -346,6 +346,7 @@ always @(posedge clk_sys) begin
 						default: ;
 					endcase
 				end
+
 				if(shift) begin
 					case(code)
 						8'h41 : keys[0][1] <= 0; // Z
