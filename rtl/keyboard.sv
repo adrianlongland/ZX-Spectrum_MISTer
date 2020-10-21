@@ -398,7 +398,7 @@ always @(posedge clk_sys) begin
 	end
 end
 
-reg [8:0] auto[46] = '{
+reg [8:0] auto[48] = '{
 	255,
 
 	0,0,0,0,0,0,0,0,
@@ -406,16 +406,18 @@ reg [8:0] auto[46] = '{
 	0,0,0,0,0,0,0,0,
 	0,0,0,0,0,0,0,0,
 
-	{1'b1, 8'h59}, // right shift
-	{1'b1, 8'h11}, // alt
-	{1'b1, 8'h14}, // ctrl
+	{1'b1, 8'h59}, // right shift up
+	{1'b1, 8'h11}, // alt up
+	{1'b1, 8'h14}, // ctrl up
 	{1'b0, 8'h3b}, // J
 	{1'b1, 8'h3b}, // J
+	{1'b0, 8'h59}, // right shift down
 	{1'b0, 8'h52}, // "
 	{1'b1, 8'h52}, // "
 	0,
 	{1'b0, 8'h52}, // "
 	{1'b1, 8'h52}, // "
+	{1'b1, 8'h59}, // right shift up
 	{1'b0, 8'h5a}, // enter
 	{1'b1, 8'h5a}, // enter
 	255
